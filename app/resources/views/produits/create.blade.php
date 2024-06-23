@@ -10,5 +10,7 @@
 
     <h1>Ajoutation des Produits</h1>
 
+    <form action="{{route('store')}}" method="POST" ></form>
+
 </body>
 </html>

@@ -39,6 +39,7 @@ class ProduitsController extends Controller
         'stocks' => 'required'
        ]);
 
+       $fields['image'] = $request->file('image')->store('produits','public');
        Produits::create($fields);
        return redirect()->route('store.index')->with('succes','Le produit est ajoutée');
 
@@ -74,7 +75,9 @@ class ProduitsController extends Controller
             'description' => 'nullable' ,
             'stocks' => 'nullable'
         ]);
-
+        if($request->hasFile('image')){
+            $fields['image'] = $request->file('image')->store('produits','public');
+        }
         $produits->update($fields);
         return redirect()->route('store.index')->with('edit','Le produit a été bien modifié');
     }

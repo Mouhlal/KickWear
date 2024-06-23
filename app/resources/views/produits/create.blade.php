@@ -10,7 +10,30 @@
 
     <h1>Ajoutation des Produits</h1>
 
-    <form action="{{route('store')}}" method="POST" ></form>
+    <form action="{{route('produits.store')}}" method="POST" >
+        @csrf
+        Title : <input type="text" name="titre" value="{{old('titre')}}"> <br>
+        @error('titre')
+            {{$message}}
+        @enderror
+        image : <input type="file" name="image" value="{{old('image')}}"> <br>
+        @error('image')
+        {{$message}}
+        @enderror
+        Prix : <input type="text" name="prix" value="{{old('prix')}}"> <br>
+        @error('prix')
+        {{$message}}
+        @enderror
+        Description <input type="text" name="description" value="{{old('description')}}"> <br>
+        @error('description')
+        {{$message}}
+        @enderror
+        Quantite du Produits <input type="number" name="stocks" value="{{old('stocks')}}"> <br>
+        @error('stocks')
+        {{$message}}
+    @enderror
+        <input type="submit" value="Add">
+    </form>
 
 </body>
 </html>

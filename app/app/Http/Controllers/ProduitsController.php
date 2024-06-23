@@ -41,7 +41,7 @@ class ProduitsController extends Controller
 
        $fields['image'] = $request->file('image')->store('produits','public');
        Produits::create($fields);
-       return redirect()->route('store.index')->with('succes','Le produit est ajoutée');
+       return redirect()->route('produits.index')->with('succes','Le produit est ajoutée');
 
     }
 
@@ -79,7 +79,7 @@ class ProduitsController extends Controller
             $fields['image'] = $request->file('image')->store('produits','public');
         }
         $produits->update($fields);
-        return redirect()->route('store.index')->with('edit','Le produit a été bien modifié');
+        return redirect()->route('produits.index')->with('edit','Le produit a été bien modifié');
     }
 
     /**
@@ -88,6 +88,6 @@ class ProduitsController extends Controller
     public function destroy(Produits $produits)
     {
         $produits->delete();
-        return redirect()->route('store.index')->with('delete','Le produit a été supprimé');
+        return redirect()->route('produits.index')->with('delete','Le produit a été supprimé');
     }
 }

@@ -12,9 +12,16 @@ class ProduitsController extends Controller
      */
     public function index()
     {
-        $produits = Produits::all();
+        $produits = Produits::paginate(8);
         return view('store.index',[
             'produits' => $produits
+        ]);
+    }
+
+    public function produits(){
+        $all_produits = Produits::all();
+        return view('store.shop',[
+            'all_produits' => $all_produits
         ]);
     }
 

@@ -86,8 +86,9 @@
             <div class="hidden md:flex md:items-center md:w-auto w-full order-3 md:order-1" id="menu">
                 <nav>
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Shop</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('produits.shop')}}">Shop</a></li>
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -131,7 +132,7 @@
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</p>
+                            <p class="text-black text-2xl my-4">"Kickwear a complètement transformé mon expérience de shopping pour les tenues de football. Les produits sont de grande qualité et le service client est exceptionnel."</p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
                     </div>
@@ -148,7 +149,7 @@
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Real Bamboo Wall Clock</p>
+                            <p class="text-black text-2xl my-4">"Les maillots sont super confortables et durables. Je suis un client fidèle de Kickwear depuis des années." </p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
                     </div>
@@ -165,7 +166,8 @@
 
                     <div class="container mx-auto">
                         <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
-                            <p class="text-black text-2xl my-4">Brown and blue hardbound book</p>
+                            <p class="text-black text-2xl my-4">Profitez d'avantages exclusifs en rejoignant notre programme de fidélité. Gagnez des points à chaque achat et échangez-les contre des réductions, des cadeaux et bien plus encore.
+                            </p>
                             <a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">view product</a>
                         </div>
                     </div>
@@ -190,26 +192,6 @@
 
         </div>
     </div>
-
-    <!--
-
-Alternatively if you want to just have a single hero
-
-<section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" style="max-width:1600px; height: 32rem; background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
-
-	<div class="container mx-auto">
-
-		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide">
-			<h1 class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</h1>
-			<a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">products</a>
-
-		</div>
-
-	  </div>
-
-</section>
-
--->
 
     <section class="bg-white py-8">
 
@@ -253,26 +235,109 @@ Alternatively if you want to just have a single hero
                 </a>
             </div>
             @endforeach
-            
+
             </div>
 
     </section>
 
     <section class="bg-white py-8">
 
-        <div class="container py-8 px-6 mx-auto">
+       <!-- Card Blog -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Grid -->
+    <div class="grid lg:grid-cols-2 lg:gap-y-16 gap-10">
+      <!-- Card -->
+      <a class="group rounded-xl overflow-hidden" href="#">
+        <div class="sm:flex">
+          <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+            <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://www.footpack.fr/wp-content/uploads/2023/11/maillots-foot-footpack-4-800x800-c-center.jpg"alt="Image Description">
+          </div>
 
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-			About
-		</a>
-
-            <p class="mt-8 mb-8">This template is inspired by the stunning nordic minimalist design - in particular:
-                <br>
-                <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a></p>
-
-            <p class="mb-8">Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam. In est ante in nibh mauris. Egestas congue quisque egestas diam in. Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac habitasse platea dictumst quisque. In aliquam sem fringilla ut. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Accumsan lacus vel facilisis volutpat est velit egestas dui id. At tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas fringilla. Vitae congue eu consequat ac.</p>
-
+          <div class="grow mt-4 sm:mt-0 sm:ms-6 px-4 sm:px-0">
+            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-600 dark:group-hover:text-red-600">
+                Qualité
+            </h3>
+            <p class="mt-3 text-gray-600 dark:text-neutral-400">
+                Nous nous engageons à offrir des produits de la plus haute qualité, fabriqués avec des matériaux durables et respectueux de l'environnement.            </p>
+            <p class="mt-4 inline-flex items-center gap-x-1 text-blue-600 decoration-2 hover:underline font-medium">
+              Read more
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </p>
+          </div>
         </div>
+      </a>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <a class="group rounded-xl overflow-hidden" href="#">
+        <div class="sm:flex">
+          <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+            <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://bmmagazine.co.uk/wp-content/uploads/2020/03/AdobeStock_239743980-scaled-e1584008515740.jpeg" alt="Image Description">
+          </div>
+
+          <div class="grow mt-4 sm:mt-0 sm:ms-6 px-4 sm:px-0">
+            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-600 dark:group-hover:text-red-600">
+                Engagement client
+            </h3>
+            <p class="mt-3 text-gray-600 dark:text-neutral-400">
+                Nous mettons un point d'honneur à fournir un excellent service client. Votre satisfaction est notre priorité.            </p>
+            <p class="mt-4 inline-flex items-center gap-x-1 text-blue-600 decoration-2 hover:underline font-medium">
+              Read more
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <a class="group rounded-xl overflow-hidden" href="#">
+        <div class="sm:flex">
+          <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+            <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://images.lesindesradios.fr/fit-in/1100x2000/filters:format(webp)/medias/A8i6543ugr/image/Nouveaux_maillots_UEFA_EURO_2024_par_Adidas1710496685392.jpeg" alt="Image Description">
+          </div>
+
+          <div class="grow mt-4 sm:mt-0 sm:ms-6 px-4 sm:px-0">
+            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-600 dark:group-hover:text-red-600">
+                Innovation
+            </h3>
+            <p class="mt-3 text-gray-600 dark:text-neutral-400">
+                Nous cherchons constamment à innover et à améliorer notre gamme de produits pour répondre aux besoins changeants de nos clients.            </p>
+            <p class="mt-4 inline-flex items-center gap-x-1 text-blue-600 decoration-2 hover:underline font-medium">
+              Read more
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+
+      <!-- Card -->
+      <a class="group rounded-xl overflow-hidden" href="#">
+        <div class="sm:flex">
+          <div class="flex-shrink-0 relative rounded-xl overflow-hidden w-full sm:w-56 h-44">
+            <img class="group-hover:scale-105 transition-transform duration-500 ease-in-out size-full absolute top-0 start-0 object-cover rounded-xl" src="https://c7.alamy.com/comp/2K5B0G0/help!-clipart-text-illustration-vector-2K5B0G0.jpg" alt="Image Description">
+          </div>
+
+          <div class="grow mt-4 sm:mt-0 sm:ms-6 px-4 sm:px-0">
+            <h3 class="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-neutral-600 dark:group-hover:text-red-600">
+                Besoin d'aide ?
+
+            </h3>
+            <p class="mt-3 text-gray-600 dark:text-neutral-400">
+                Nous sommes là pour vous aider. Si vous avez des questions, des suggestions ou besoin d'assistance, n'hésitez pas à nous contacter.            </p>
+            <p class="mt-4 inline-flex items-center gap-x-1 text-blue-600 decoration-2 hover:underline font-medium">
+              Read more
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </p>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+    </div>
+    <!-- End Grid -->
+  </div>
+  <!-- End Card Blog -->
 
     </section>
 
@@ -281,10 +346,9 @@ Alternatively if you want to just have a single hero
     <div class="w-full mx-auto flex flex-wrap">
       <div class="flex w-full lg:w-1/2 ">
         <div class="px-3 md:px-0">
-          <h3 class="font-bold text-gray-900">About</h3>
+          <h3 class="font-bold text-gray-900">KickWear</h3>
           <p class="py-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-          </p>
+            KickWear est votre destination ultime pour toutes vos tenues de football. Que vous soyez un joueur passionné, un supporter dévoué ou simplement un amateur de mode sportive, nous avons ce qu'il vous faut. Notre boutique en ligne propose une large gamme de tenues de football de haute qualité, allant des maillots officiels des plus grands clubs et équipes nationales aux équipements d'entraînement et accessoires indispensables.          </p>
         </div>
       </div>
       <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right mt-6 md:mt-0">

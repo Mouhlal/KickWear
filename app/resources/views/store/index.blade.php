@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Product</title>
     <script src="./node_modules/preline/dist/preline.js"></script>
+    @vite('resources/css/app.css')
 </head>
 <body>
 <!-- Card Grid -->

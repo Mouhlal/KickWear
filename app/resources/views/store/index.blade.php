@@ -87,8 +87,9 @@
                 <nav>
                     <ul class="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                         <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('produits.shop')}}">Shop</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">About</a></li>
-                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="#">Contact</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.about')}}">About</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.contact')}}">Contact</a></li>
+                        <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.form')}}">Login</a></li>
                     </ul>
                 </nav>
             </div>

@@ -3,63 +3,46 @@
 namespace App\Http\Controllers;
 
 use App\Models\client;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+use function PHPUnit\Framework\returnSelf;
 
 class ClientController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        
-    }
+   public function about(){
+    return view('pages.about');
+   }
+   public function contact(){
+    return view('pages.contact');
+   }
+   public function showLoginForm()
+   {
+       return view('store.login');
+   }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+   public function login(Request $request){
+    $email = $request->email;
+    $password = $request->password;
+    $xo = [
+        'email' => $email,
+        'password' => $password
+    ];
+    if(Auth::attempt($xo)){
+       $request->session()->regenerate();
+       return redirect()->route('store.index')->with('log','');
+    }else{
+        return back()->withErrors([
+            'email' => 'Email Or Password is incorrect !! '
+        ]);
     }
+   }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+   public function deconnexion(Request $request){
+    Session::flush();
+    Auth::logout();
+    return redirect()->route('/')->with('dec','Deconnexion avec succes');
+   }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(client $client)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(client $client)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, client $client)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(client $client)
-    {
-        //
-    }
 }

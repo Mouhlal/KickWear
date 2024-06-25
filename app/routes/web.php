@@ -15,3 +15,9 @@ Route::controller(ProduitsController::class)->group(function(){
     Route::delete('/produits/{id}','delete')->name('produits.delete');
 });
 
+Route::controller(ClientController::class)->group(function(){
+    Route::get('/about','about')->name('client.about');
+    Route::get('/contact','contact')->name('client.contact');
+    Route::get('/login','showLoginForm')->name('client.form');
+    Route::post('/login','login')->name('client.login');
+});

@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('cin')->unique();
             $table->string('adresse')->nullable();
             $table->string('telephone')->nullable();
-            $table->string('role')->default(false);
+            $table->enum('role', ['admin', 'client'])->default('client');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

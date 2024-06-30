@@ -65,6 +65,7 @@ class PanierController extends Controller
      */
     public function destroy(Panier $panier)
     {
-        //
+        $panier->delete();
+        return back();
     }
 }

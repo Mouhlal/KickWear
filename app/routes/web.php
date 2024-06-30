@@ -18,6 +18,7 @@ Route::controller(ProduitsController::class)->group(function(){
 Route::controller(ClientController::class)->group(function(){
     Route::get('/about','about')->name('client.about');
     Route::get('/contact','contact')->name('client.contact');
-    Route::get('/login','showLoginForm')->name('client.form');
-    Route::post('/login','login')->name('client.login');
+    Route::get('/login','showLoginForm')->name('client.form')->middleware('guest');
+    Route::post('/login','login')->name('client.login')->middleware('guest');
+    Route::get('/register','showRegisterForm')->name('client.register');
 });

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Connexion</title>
     @vite('resources/css/app.css')
-    
+
 </head>
 <body class="h-full bg-gray-50 ">
 @include('pages.nav')
@@ -19,12 +19,12 @@
           <h1 class="block text-2xl font-bold text-gray-800">Sign in</h1>
           <p class="mt-2 text-sm text-gray-600">
             Don't have an account yet?
-            <a class="text-blue-600 decoration-2 hover:underline font-medium" href="../examples/html/signup.html">
+            <a class="text-blue-600 decoration-2 hover:underline font-medium" href="{{route('client.registerform')}}">
               Sign up here
             </a>
           </p>
         </div>
-    
+
         <div class="mt-5">
           <button type="button" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 border bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
             <svg class="w-4 h-auto" width="46" height="47" viewBox="0 0 46 47" fill="none">
@@ -35,9 +35,9 @@
             </svg>
             Sign in with Google
           </button>
-    
+
           <div class="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6">Or</div>
-    
+
           <!-- Form -->
           <form method="POST" action="{{ route('client.login') }}">
             @csrf
@@ -46,7 +46,7 @@
               <div>
                 <label for="email" class="block text-sm mb-2">Email address</label>
                 <div class="relative">
-                  <input 
+                  <input
                   type="email"
                   id="email"
                   name="email"
@@ -54,7 +54,7 @@
                   required aria-describedby="email-error">
               </div>
               <!-- End Form Group -->
-    
+
               <!-- Form Group -->
               <div>
                 <div class="flex justify-between items-center">
@@ -62,14 +62,14 @@
                   <a class="text-sm text-blue-600 decoration-2 hover:underline font-medium" href="../examples/html/recover-account.html">Forgot password?</a>
                 </div>
                 <div class="relative">
-                  <input type="password" 
+                  <input type="password"
                          id="password"
                          name="password"
                          class="py-3 px-4 block w-full border-gray-200 border rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                         required aria-describedby="password-error">                  
+                         required aria-describedby="password-error">
               </div>
               <!-- End Form Group -->
-    
+
               <!-- Checkbox -->
               <div class="flex items-center">
                 <div class="flex">
@@ -80,7 +80,7 @@
                 </div>
               </div>
               <!-- End Checkbox -->
-    
+
               <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Sign in</button>
             </div>
           </form>

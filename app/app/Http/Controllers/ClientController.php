@@ -55,11 +55,12 @@ class ClientController extends Controller
         $field = $request->validate([
             'name' => 'required',
             'email' => 'required|email|unique:users',
+            'cin' => 'required|unique:users',
             'password' => 'required|min:6|confirmed',
         ]);
         $field['password'] = Hash::make($request->password);
         User::create($field);
-        return redirect()->route('auth.login')->with('reg','Inscription avec succes');
+        return redirect()->route('client.form')->with('reg','Inscription avec succes');
    }
 
 }

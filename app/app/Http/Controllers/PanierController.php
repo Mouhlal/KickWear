@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Panier;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PanierController extends Controller
 {
@@ -12,7 +13,11 @@ class PanierController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $panier = Panier::where('user_id', $user->id)->get();
+        return view('panier.monpanier',[
+            'panier' => $panier
+        ]);
     }
 
     /**

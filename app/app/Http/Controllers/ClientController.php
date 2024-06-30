@@ -19,7 +19,12 @@ class ClientController extends Controller
    }
    public function showLoginForm()
    {
-       return view('store.login');
+       return view('auth.login');
+   }
+
+   public function showRegisterForm()
+   {
+       return view('auth.register');
    }
 
    public function login(Request $request){
@@ -31,7 +36,7 @@ class ClientController extends Controller
     ];
     if(Auth::attempt($xo)){
        $request->session()->regenerate();
-       return redirect()->route('store.index')->with('log','');
+       return redirect()->route('produits.index')->with('log','');
     }else{
         return back()->withErrors([
             'email' => 'Email Or Password is incorrect !! '

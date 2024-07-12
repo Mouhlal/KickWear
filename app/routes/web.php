@@ -13,6 +13,7 @@ Route::controller(ProduitsController::class)->group(function(){
     Route::get('/produits/{id}','edit')->name('produits.edit');
     Route::put('/produits/update/{id}','update')->name('produits.update');
     Route::delete('/produits/{id}','delete')->name('produits.delete');
+    Route::get('/show/{id}','show')->name('produits.show');
 });
 
 Route::controller(ClientController::class)->group(function(){

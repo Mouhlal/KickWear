@@ -55,9 +55,10 @@ class ProduitsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Produits $produits)
+    public function show($id)
     {
-        return view('store.show',compact('produits'));
+        $produit = Produits::find($id);
+        return view('store.show',compact('produit'));
     }
 
     /**

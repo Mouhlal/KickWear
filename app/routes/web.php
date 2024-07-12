@@ -20,5 +20,7 @@ Route::controller(ClientController::class)->group(function(){
     Route::get('/contact','contact')->name('client.contact');
     Route::get('/login','showLoginForm')->name('client.form')->middleware('guest');
     Route::post('/login','login')->name('client.login')->middleware('guest');
-    Route::get('/register','showRegisterForm')->name('client.register');
+    Route::get('/register','showRegisterForm')->name('client.registerform');
+    Route::post('/register/acc','register')->name('client.register')->middleware('guest');
+    Route::get('/logout','deconnexion')->name('client.deconnexion')->middleware('auth');
 });

@@ -16,7 +16,12 @@
                     <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('produits.shop')}}">Shop</a></li>
                     <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.about')}}">About</a></li>
                     <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.contact')}}">Contact</a></li>
+                        @guest
                     <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.form')}}">Login</a></li>
+                         @endguest
+                         @auth
+                    <li><a class="inline-block no-underline hover:text-black hover:underline py-2 px-4" href="{{route('client.deconnexion')}}">Deconnexion</a></li>
+                        @endauth
                 </ul>
             </nav>
         </div>

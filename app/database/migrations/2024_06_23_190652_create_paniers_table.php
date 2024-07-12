@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('paniers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('clients_id');
-            $table->foreign('clients_id')->references('id')->on('clients');
+            $table->unsignedBigInteger('users_id');
+            $table->foreign('users_id')->references('id')->on('users');
             $table->unsignedBigInteger('produits_id');
             $table->foreign('produits_id')->references('id')->on('produits');
             $table->integer('quantite');
